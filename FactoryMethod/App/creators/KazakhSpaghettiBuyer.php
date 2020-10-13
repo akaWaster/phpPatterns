@@ -1,20 +1,22 @@
 <?php
 
-use FactoryMethod\classes\KazakhSpaghettiCooker;
+namespace App\creators;
 
-require_once('abstracts/SpaghettiCooker.php');
-require_once('interfaces/ICookSpaghetti.php');
+use App\classes\KazakhSpaghettiCooker;
+use App\interfaces\ICookSpaghetti;
+use App\abstracts\SpaghettiCooker;
 
 class  KazakhSpaghettiBuyer extends SpaghettiCooker
 {
     const KAZAKH_SPAGHETTI_SHOP = 'Magnum',
         KAZAKH_SPAGHETTI_TYPE = 'Альденте';
+
     public function __construct()
     {
         echo 'Готовится Казахский Спагетти'.PHP_EOL;
     }
 
-    public function buySpaghetti()
+    public function buySpaghetti() : ICookSpaghetti
     {
         return new KazakhSpaghettiCooker(self::KAZAKH_SPAGHETTI_SHOP, self::KAZAKH_SPAGHETTI_TYPE);
     }

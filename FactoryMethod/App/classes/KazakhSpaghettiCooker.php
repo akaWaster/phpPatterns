@@ -1,10 +1,9 @@
 <?php
 
 
-namespace FactoryMethod\classes;
+namespace App\classes;
 
-use FactoryMethod\interfaces\ICookSpaghetti;
-require_once('interfaces/ICookSpaghetti.php');
+use App\interfaces\ICookSpaghetti;
 
 class KazakhSpaghettiCooker implements ICookSpaghetti
 {

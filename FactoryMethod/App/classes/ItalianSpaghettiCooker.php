@@ -1,19 +1,20 @@
 <?php
 
-namespace FactoryMethod\classes;
+namespace App\classes;
 
 
-use FactoryMethod\interfaces\ICookSpaghetti;
-require_once('interfaces/ICookSpaghetti.php');
+use App\interfaces\ICookSpaghetti;
 
-class ItalianSpaghettiCooker implements ICookSpaghetti {
+class ItalianSpaghettiCooker implements ICookSpaghetti
+{
+    private $shop;
+    private $type;
 
     public function __construct($shop, $type)
     {
         $this->shop = $shop;
         $this->type = $type;
         echo 'Спагетти (' . $this->type . ') был куплен в ' . $this->shop . PHP_EOL;
-
     }
 
     public function __destruct()

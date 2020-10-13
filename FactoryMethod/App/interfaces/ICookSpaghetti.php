@@ -1,6 +1,6 @@
 <?php
 
-namespace FactoryMethod\interfaces;
+namespace App\interfaces;
 
 interface ICookSpaghetti
 {
@@ -13,5 +13,4 @@ interface ICookSpaghetti
     public function cookSpaghetti();
 
     public function placeSpaghetti();
-
 }

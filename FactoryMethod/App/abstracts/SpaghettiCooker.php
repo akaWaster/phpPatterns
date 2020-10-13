@@ -1,7 +1,9 @@
 <?php
 
-use FactoryMethod\interfaces\ICookSpaghetti;
 
+namespace App\abstracts;
+
+use App\interfaces\ICookSpaghetti;
 
 abstract class SpaghettiCooker
 {
